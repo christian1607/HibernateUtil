@@ -1,0 +1,6 @@
+  TypedQuery<Object[]> query = em.createQuery(
+      "SELECT c.name, c.capital.name FROM Country AS c", Object[].class);
+  List<Object[]> results = query.getResultList();
+  for (Object[] result : results) {
+      System.out.println("Country: " + result[0] + ", Capital: " + result[1]);
+  }
